@@ -1,0 +1,49 @@
+name: bpb
+description: "Cross-platform VPN client."
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.5
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_secure_storage: ^11.2.0
+  http: ^1.2.2
+  http_parser: ^4.1.0
+  material_symbols_icons: 4.2960.0
+  mobile_scanner: ^7.4.2
+  pointycastle: ^4.0.0
+  qr_flutter: ^4.1.0
+  shared_preferences: ^2.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    # Minified worker uploaded to Cloudflare when the app deploys. Source: worker/worker.js
+    - worker/worker.min.js
+    # Shown in Settings → About → License.
+    - LICENSE
+    # The status bar icon (android/…/drawable-*/ic_stat_vpn.png), for the home page title;
+    # the 1.5x–4.0x folders hold the denser copies.
+    - assets/icons/ic_stat_vpn.png
+    # Tor bridges for the setup wizard's "Retry with Tor": bridges.json, written at build time by
+    # scripts/fetch_tor_bridges.sh (required before building).
+    - assets/tor/
+  fonts:
+    - family: OpenSans
+      fonts:
+        - asset: assets/fonts/OpenSans-Regular.ttf
+        - asset: assets/fonts/OpenSans-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/OpenSans-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/OpenSans-Bold.ttf
+          weight: 700

@@ -1,0 +1,45 @@
+*
+!*/
+
+# Project
+!/.gitignore
+!/README.md
+!/RELEASE_NOTES.md
+!/LICENSE
+!/pubspec.yaml
+!/pubspec.lock
+!/analysis_options.yaml
+!/.github/workflows/*.yml
+
+# Icon sources (the launcher, status bar and splash icons are made from these)
+!/images/**
+
+# App
+!/lib/**
+!/test/**
+!/scripts/**
+!/assets/fonts/**
+!/assets/icons/**
+
+# Android
+!/android/build.gradle.kts
+!/android/settings.gradle.kts
+!/android/gradle.properties
+!/android/gradle/wrapper/gradle-wrapper.properties
+!/android/app/build.gradle.kts
+!/android/app/src/main/AndroidManifest.xml
+!/android/app/src/debug/AndroidManifest.xml
+!/android/app/src/profile/AndroidManifest.xml
+!/android/app/src/main/kotlin/**
+!/android/app/src/main/res/**
+!/android/app/src/main/assets/psiphon_config.json
+
+# Native helpers
+!/psiphon/**
+!/xray/*.go
+!/xray/go.mod
+!/xray/go.sum
+
+# Worker
+!/worker/worker.js
+!/worker/package.json

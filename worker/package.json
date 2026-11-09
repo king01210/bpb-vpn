@@ -1,0 +1,11 @@
+{
+  "name": "vpn-worker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "minify": "terser worker.js --module --compress passes=3,drop_console=true --mangle -o worker.min.js"
+  },
+  "devDependencies": {
+    "terser": "5.51.2"
+  }
+}
